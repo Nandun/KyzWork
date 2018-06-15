@@ -31,24 +31,87 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
-	<style>
-header.masthead {
-  text-align: center;
-  color: white;
-  background-image: url("img/yup.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: auto;
-  -o-background-size: cover;
-  background-size: cover;
-      max-height: 100vh;
+<style>
+	header.masthead {
+	  text-align: center;
+	  color: white;
+	  background-image: url("893.jpg");
+	  background-repeat: no-repeat;
+	  background-attachment: scroll;
+	  background-position: center center;
+	  -webkit-background-size: cover;
+	  -moz-background-size: auto;
+	  -o-background-size: cover;
+	  background-size: cover;
+		  max-height: 105vh;
+	}
+	#carousel_inner {
+    float: left;
+    width: 900px;
+    overflow: hidden;
+    background: #;
+	margin-left: 150px;
+}
+
+#carousel_ul li img {
+    width: 200px;
+    height: 200px;
+}
+
+#carousel_ul {
+    position: relative;
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0px;
+    width: 9999px;
+    padding-bottom: 10px;
+}
+
+#carousel_ul li {
+    float: left;
+    width: 200px;
+    padding: 0px;
+    height: 200px;
+    background: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#carousel_ul li img {
+    cursor: pointer;
+    cursor: hand;
+    border: 0px;
+}
+
+#left_scroll, #right_scroll {
+    float: left;
+    height: 130px;
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#left_scroll img, #right_scroll img {
+    border: 0;
+ /* remove the default border of linked image */
+/*styling*/
+    cursor: pointer;
+    cursor: hand;
+}
+
+#left_scroll img {
+    width: 40px;
+    height: 40px;
+}
+
+#right_scroll img {
+    width: 25px;
+    height: 25px;
 }
 </style>
-    <link href="css/creative.css" rel="stylesheet">
-  </head>
-
+</head>
   <body id="page-top">
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
       <div class="container">
@@ -60,7 +123,7 @@ header.masthead {
         <div class="collapse navbar-collapse" id="navbarResponsive">
              <ul class="navbar-nav  ml-auto">
                <li class="nav-item">
-<a href="index.html">
+<a href="login2.html">
   <button class="button" style="vertical-align:middle">Home</button>
   </a>      
       </li>
@@ -81,7 +144,7 @@ header.masthead {
     <a href="pm.html">Project Management</a>
   </div>
   </div>
-     </li>
+		     </li>
 <a href="services.html">
   <button class="button" style="vertical-align:middle">Services</button>
   </a>		
@@ -93,12 +156,13 @@ header.masthead {
 			<a href="login.html">
   <button class="button" style="vertical-align:middle">Login</button>
   </a>
-            </li>        
+            </li>         
         </ul>
       </div>
     </div>
 </nav>
  
+<div class="box">
     <!-- Header -->
     <header class="masthead">
 		   
@@ -115,7 +179,7 @@ header.masthead {
 <div class="w3-container w3-center w3-animate-opacity">
 
 <div class="w3-container w3-center w3-animate-right">
-          <div class="intro-lead-in" >Marketing Management</div>
+          <div class="intro-lead-in" >Striving for Perfection</div>
 		  <br>
 		  <br>
 		
@@ -134,125 +198,207 @@ header.masthead {
       </div>
     </header>
 
-
-
- </div>
-
+  <div class="cert"
     <section id="services">
       <div class="container">
+	  
+            <h6>Certifications</h6>
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Marketing Management</h2>
-			 <p>Contract Management System (CMS) is web enabled, customizable secure system to manage vendor relations. CMS provides a user friendly interface between a company and its vendor.It enables the company to quickly respond to fill in job requirement using vendor resources. The vendor can use this system to track the job requests and manage contracts.</p>
-	 <p>Contract Management System (CMS) is web enabled, customizable secure system to manage vendor relations. CMS provides a user friendly interface between a company and its vendor.It enables the company to quickly respond to fill in job requirement using vendor resources. The vendor can use this system to track the job requests and manage contracts.</p>
-         	 <p>Contract Management System (CMS) is web enabled, customizable secure system to manage vendor relations. CMS provides a user friendly interface between a company and its vendor.It enables the company to quickly respond to fill in job requirement using vendor resources. The vendor can use this system to track the job requests and manage contracts.</p>
-         	 <p>Contract Management System (CMS) is web enabled, customizable secure system to manage vendor relations. CMS provides a user friendly interface between a company and its vendor.It enables the company to quickly respond to fill in job requirement using vendor resources. The vendor can use this system to track the job requests and manage contracts.</p>
-                   
-		  <a class="btn btn-light btn-xl js-scroll-trigger" href="#more">More Products</a>
-          </div>
+		
+   <div id='carousel_container'>  
+    <div id='carousel_inner'>  
+        <ul id='carousel_ul'>  
+		   <li>
+                <a href=''>
+                    <img src='HUBZone.png'/>
+                </a>
+            </li>  
+            <li>
+                <a href='#'>
+                    <img src='GSA.png'/>
+                </a>
+            </li>  
+            <li>
+                <a href='#'>
+                    <img src='cmmi.jpg'/>
+                </a>
+            </li>
+            <li>
+                  <a href='#'>
+                      <img src='mbe.png'/>
+                  </a>
+              </li>
+            <li>
+                  <a href='#'>
+                      <img src='wbenc.png'/>
+                  </a>
+              </li>
+            <li>
+                  <a href='#'>
+                      <img src='sba8alogo.png'/>
+                  </a>
+              </li>
+        </ul>  
+    </div>   
+</div>  
+   </div>
+      </div>
+    </div>
+    </section>
+ <script>
+  $(document).ready(function() {  
+  
+        //options( 1 - ON , 0 - OFF)  
+        var auto_slide = 1;  
+        var hover_pause = 1;  
+        var key_slide = 1;  
+  
+        //speed of auto slide(  
+        var auto_slide_seconds = 0;  
+        /* IMPORTANT: i know the variable is called ...seconds but it's 
+        in milliseconds ( multiplied with 1000) '*/  
+  
+        /*move the last list item before the first item. The purpose of this is 
+        if the user clicks to slide left he will be able to see the last item.*/  
+        $('#carousel_ul li:first').before($('#carousel_ul li:last'));  
+  
+        //check if auto sliding is enabled  
+        if(auto_slide == 1){  
+            /*set the interval (loop) to call function slide with option 'right' 
+            and set the interval time to the variable we declared previously */  
+            var timer = setInterval('slide("right")', auto_slide_seconds);  
+  
+            /*and change the value of our hidden field that hold info about 
+            the interval, setting it to the number of milliseconds we declared previously*/  
+            $('#hidden_auto_slide_seconds').val(auto_slide_seconds);  
+        }  
+  
+        //check if hover pause is enabled  
+        if(hover_pause == 1){  
+            //when hovered over the list  
+            $('#carousel_ul').hover(function(){  
+                //stop the interval  
+                clearInterval(timer)  
+            },function(){  
+                //and when mouseout start it again  
+                timer = setInterval('slide("right")', auto_slide_seconds);  
+            });  
+  
+        }  
+  
+        //check if key sliding is enabled  
+        if(key_slide == 1){  
+  
+            //binding keypress function  
+            $(document).bind('keypress', function(e) {  
+                //keyCode for left arrow is 37 and for right it's 39 '  
+                if(e.keyCode==37){  
+                        //initialize the slide to left function  
+                        slide('left');  
+                }else if(e.keyCode==39){  
+                        //initialize the slide to right function  
+                        slide('right');  
+                }  
+            });  
+  
+        }  
+  
+  });  
+  
+//FUNCTIONS BELLOW  
+  
+//slide function  
+function slide(where){  
+  
+            //get the item width  
+            var item_width = $('#carousel_ul li').outerWidth() + 10;  
+  
+            /* using a if statement and the where variable check 
+            we will check where the user wants to slide (left or right)*/  
+            if(where == 'left'){  
+                //...calculating the new left indent of the unordered list (ul) for left sliding  
+                var left_indent = parseInt($('#carousel_ul').css('left')) + item_width;  
+            }else{  
+                //...calculating the new left indent of the unordered list (ul) for right sliding  
+                var left_indent = parseInt($('#carousel_ul').css('left')) - item_width;  
+  
+            }  
+  
+            //make the sliding effect using jQuery's animate function... '  
+            $('#carousel_ul:not(:animated)').animate({'left' : left_indent},3000,function(){  
+  
+                /* when the animation finishes use the if statement again, and make an ilussion 
+                of infinity by changing place of last or first item*/  
+                if(where == 'left'){  
+                    //...and if it slided to left we put the last item before the first item  
+                    $('#carousel_ul li:first').before($('#carousel_ul li:last'));  
+                }else{  
+                    //...and if it slided to right we put the first item after the last item  
+                    $('#carousel_ul li:last').after($('#carousel_ul li:first'));  
+                }  
+  
+                //...and then just get back the default left indent  
+                $('#carousel_ul').css({'left' : '-210px'});  
+            });  
+  
+}  
+</script>
+</div>
+	<section>
+	<div class=bar>
+	<div>
+	</section>
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+  <!-- Features Section -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h6>Welcome to Kyzen</h6>
+    
+<p> Kyzen Consulting is a complete 
+    software solutions provider. Kyzen 
+    provides a multi-faceted portfolio 
+    of products and service to it's clients, 
+    including a complete E-Commerce 
+    solution methodology, on-site and 
+    off-site software systems development, 
+    and turnkey projects.</p>
+          <p>Kyzen Consulting Services offers expertise in all phases of system and software development, from start to finish, on a wide range of hardware and software platforms, using the latest software design methodologies. We provide a multi-faceted portfolio of products and services to our clients, including a complete software solution methodology. We can work at your location or ours, providing software and systems development, consultants, subcontracting, training, and multimedia development. </p>        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid rounded" src="staff.jpg" alt="">
         </div>
       </div>
-    
+      <!-- /.row -->
+
+      <hr>
+
+    </div>
+    <!-- /.container -->
+
+        </div>
+      </div>
     </section>
-
-    <section id="more" class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="mm.html">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    READ MORE
-                  </div>
-                  <div class="project-name">
-                    Marketing Management
-                  </div>
-                </div>
-              </div>
-            </a>
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Capability Statement</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+      <!--    <div class="col-lg-4 ml-auto">
+            <p class="lead">Text Describing Capability statement and referencing download Link</p>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="em.html">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    READ MORE
-                  </div>
-                  <div class="project-name">
-                    Event Management
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="cm.html">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    READ MORE
-                  </div>
-                  <div class="project-name">
-                    Contract Management
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="vm.html">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    READ MORE
-                  </div>
-                  <div class="project-name">
-                    Vendor Management
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="hm.html">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    READ MORE
-                  </div>
-                  <div class="project-name">
-                    Hiring Management
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-		  <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="pm.html">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    READ MORE
-                  </div>
-                  <div class="project-name">
-                    Project Management
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-  
-
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Text Describing Capability statement and referencing download Link</p>
+          </div>-->
+        </div>
+        <div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="cap.pdf">
+            <i class="fa fa-download mr-2"></i>
+            Download
+          </a>
+        </div>
+      </div> 
     </section>
-
-
     <!-- Contact -->
     <section id="contact">
       <div class="container">
@@ -338,7 +484,12 @@ header.masthead {
     </footer>
 
 </div>
+</div>
+<script>
+$(".box").hide().fadeIn(2000);
+</script>
  
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
