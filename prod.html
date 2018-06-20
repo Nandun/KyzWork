@@ -219,7 +219,7 @@ input:focus{
 </style>
   </head>
   <body>
-     <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
+   <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
       <div class="container">
         <img class="navbar-brand js-scroll-trigger" src="logo.png" alt=""> 
         <button class="navbar-toggler navbar-toggler-right  bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -229,7 +229,7 @@ input:focus{
         <div class="collapse navbar-collapse" id="navbarResponsive">
              <ul class="navbar-nav  ml-auto">
                <li class="nav-item">
-<a href="IndexUpdate.html">
+<a href="login2.html">
   <button class="button" style="vertical-align:middle">Home</button>
   </a>      
       </li>
@@ -238,11 +238,19 @@ input:focus{
   <button class="button" style="vertical-align:middle">About</button>
   </a>
 			</li>
-		  <li class="nav-item">
-            <a href="prod.html">
-  <button class="button" style="vertical-align:middle">Products</button>
-  </a>
-			</li>
+		<li class="nav-item">
+              	<div class="dropdown">
+  <button class="dropbtn">Products</button>
+  <div class="dropdown-content">
+    <a href="cm.html">Contract Management</a>
+    <a href="em.html">Event Management</a>
+    <a href="mm.html">Marketing Management</a>
+    <a href="vm.html">Vendor Management</a>
+    <a href="hm.html">Hiring Management</a>
+    <a href="pm.html">Project Management</a>
+  </div>
+  </div>
+		     </li>
 <a href="services.html">
   <button class="button" style="vertical-align:middle">Services</button>
   </a>		
@@ -254,7 +262,7 @@ input:focus{
 			<a href="login.html">
   <button class="button" style="vertical-align:middle">Login</button>
   </a>
-            </li>           
+            </li>         
         </ul>
       </div>
     </div>
