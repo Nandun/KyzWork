@@ -1,4 +1,3 @@
-
 body {
   overflow-x: hidden;
   font-family: 'Libre Baskerville';
@@ -16,12 +15,17 @@ a {
 a:hover {
   color: #fec503;
 }
-
+.cap{
+	font-size: 50px;
+	text-align: center;
+}
 .text-primary {
   color: #fed136 !important;
 }
 .bg-primary {
-  background-color: #18BC9C !important;
+
+  background-color: #FFFFFF !important;
+  color: #191970 !important;
 }
 
 .bg-secondary {
@@ -140,7 +144,7 @@ text-decoration: none;
   transition: all 0.5s;
   cursor: pointer;
   margin: 10px;
-text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -279,7 +283,7 @@ header.masthead {
 
 header.masthead .intro-text {
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 1px;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -288,7 +292,6 @@ header.masthead .intro-text .intro-lead-in {
   color: rgb(255,255,255);
   text-shadow: 2px 2px 4px #000000;
   line-height: 22px;
-  margin-bottom: 25px;
   font-family: Impact, Charcoal, sans-serif;
 }
 
@@ -296,7 +299,7 @@ header.masthead .intro-text .intro-heading {
   font-size: 80px;
   font-weight: 700;
   line-height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -308,7 +311,6 @@ header.masthead .intro-text .intro-heading {
   header.masthead .intro-text .intro-lead-in {
     font-size: 80px;
     line-height: 40px;
-    margin-bottom: 25px;
     font-family: Impact, Charcoal, sans-serif;
 	    text-shadow: 2px 2px #000000;
 	font-size:"5vw";
@@ -317,7 +319,6 @@ header.masthead .intro-text .intro-heading {
     font-size: 75px;
     font-weight: 700;
     line-height: 75px;
-    margin-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
   }
 }
@@ -325,9 +326,10 @@ header.masthead .intro-text .intro-heading {
 	text-align: center;
 vertical-align: middle;
 color:857F84;
-font-size: 40px;
-font-family: Arial, Helvetica, sans-serif;
+font-size: 40px;	
   background-color: #FFFFFF;
+  background-image: url("../city.jpg");
+  font-family: Impact, Charcoal, sans-serif;
   
 }
 .bar{
@@ -338,7 +340,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 h6{
 	font-size: 1.0em;
-	color: #00255a;
+	color: #FFFFFF;
 }
 .service-heading {
   margin: 0px 0;
