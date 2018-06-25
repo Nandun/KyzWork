@@ -17,7 +17,6 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	  
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
@@ -32,6 +31,117 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 <style>
+
+
+.firstname {
+
+    color:#000000;
+}
+/* Keyframes for the fade-in */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  color:#FFFFFF;
+  opacity:0;
+  opacity: 1 \9; /*just in case ie*/
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+.fade-in.firstname {
+   -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: .9s;
+  -moz-animation-delay: .9s;
+  animation-delay: .9s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.fade-in.four {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.fade-in.five {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay:1.8s;
+  animation-delay: 1.8s;
+}
+
+.fade-in.six {
+  -webkit-animation-delay: 2.1s;
+  -moz-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.fade-in.seven {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.fade-in.eight {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+.fade-in.nine {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.firstone, .firsttwo, .firstthree, .firstfour {
+
+ color:#FFFFFF;
+}
+.fade-in.firstfour {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+.fade-in.firstthree {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+.fade-in.firsttwo {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.fade-in.firstone {
+  -webkit-animation-delay: 2.3s;
+  -moz-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+
+
+
+
 #loader {
  margin: auto;
   width: 250px;
@@ -45,6 +155,7 @@
   justify-content: center;
   background: radial-gradient(ellipse at center, rgba(58,134,183, 1) 0%,rgba(255,255,255,0) 65%);
 }
+
 .loader.smallify {
   animation: smallify 0.5s normal forwards;
   -webkit-animation: smallify 0.5s normal forwards;
@@ -52,6 +163,7 @@
   -ms-animation: smallify 0.5s normal forwards;
   -o-animation: smallify 0.5s normal forwards;
 }
+
 @keyframes smallify {
   0% {
     width: 250px;
@@ -62,6 +174,7 @@
     height: 0px;
   }
 }
+
 .center-icon {
   position: relative;
   z-index: 2;
@@ -82,6 +195,7 @@
     0 0 50px 5px #fff,
     0 0 50px 10px #fff;
 }
+
 .center-icon.minimise {
   animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
   -webkit-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
@@ -89,6 +203,7 @@
   -ms-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
   -o-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
 }
+
 @keyframes minimise {
   0% {
     width: 5px;
@@ -108,6 +223,7 @@
     box-shadow: none;
   }
 }
+
 @keyframes pulse {
   0% {
   box-shadow: 
@@ -126,6 +242,7 @@
       0 0 500px 35px #fff;
   }
 }
+
 .layer {
   position: absolute;
   border-radius: 50%;
@@ -140,17 +257,22 @@
 /*   Want to use:border-image:
       linear-gradient(); however doesn't work with    border-radius as of yet! :(*/
 }
+
 .layer.compact {
   width: 0;
   height: 0;
   border: none;
 }
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 /*  This next part could be refactored into perhaps using Javascript.
+
 There's a decent amount of code duplication which isn't the best! */
+
 .layer-1 {
   width: 40px;
   height: 40px;
@@ -160,6 +282,7 @@ There's a decent amount of code duplication which isn't the best! */
   -ms-animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
   -o-animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
 }
+
 .layer-2 {
   width: 80px;
   height: 80px;
@@ -169,6 +292,7 @@ There's a decent amount of code duplication which isn't the best! */
   -ms-animation: spin 2s linear infinite;
   -o-animation: spin 2s linear infinite;
 }
+
 .layer-3 {
   width: 130px;
   height: 130px;
@@ -178,6 +302,7 @@ There's a decent amount of code duplication which isn't the best! */
   -ms-animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
   -o-animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
 }
+
 .layer-4 {
   width: 190px;
   height: 190px;
@@ -187,6 +312,7 @@ There's a decent amount of code duplication which isn't the best! */
   -ms-animation: spin 3s linear infinite;
   -o-animation: spin 3s linear infinite;
 }
+
 .finish-loading {
   z-index: 2;
   text-align: center;
@@ -201,6 +327,8 @@ There's a decent amount of code duplication which isn't the best! */
   font-family: "Segoe UI";
   transition: all 1s cubic-bezier(.27,.62,.94,.64);
 }
+
+
 .noAnimation {
   animation: none !important;
   -webkit-animation: none !important;
@@ -208,6 +336,7 @@ There's a decent amount of code duplication which isn't the best! */
   -ms-animation: none !important;
   -o-animation: none !important;
 }
+
 .welcome-message {
   position: absolute;
   z-index: 1;
@@ -218,6 +347,7 @@ There's a decent amount of code duplication which isn't the best! */
   transition: all 1s cubic-bezier(.27,.62,.94,.64);
   opacity: 0;
 }
+
 .welcome-fade {
   opacity: 1;
 }
@@ -229,18 +359,22 @@ There's a decent amount of code duplication which isn't the best! */
   animation-name: animatebottom;
   animation-duration: 1s
 }
+
 @-webkit-keyframes animatebottom {
   from { bottom:-100px; opacity:0 } 
   to { bottom:0px; opacity:1 }
 }
+
 @keyframes animatebottom { 
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
 }
+
 #myDiv {
   display: none;
   text-align: center;
 }
+
 	header.masthead {
 	  text-align: center;
 	  color: white;
@@ -252,7 +386,7 @@ There's a decent amount of code duplication which isn't the best! */
 	  -moz-background-size: auto;
 	  -o-background-size: cover;
 	  background-size: cover;
-		  max-height: 105vh;
+		  max-height: 85vh;
 	}
 	#carousel_inner {
     float: left;
@@ -264,15 +398,18 @@ There's a decent amount of code duplication which isn't the best! */
 .about{
 	  background-image: url("face.jpg");
 	  color: white;
+	  max-height: 500px;
 }
+
 .cap{
-	  background-image: url("face.jpg");
-	  color: white;
+	  background-image: url("capback.jpg");
+	  color: dark-blue;
 }
 #carousel_ul li img {
     width: 200px;
     height: 200px;
 }
+
 #carousel_ul {
     position: relative;
     list-style-type: none;
@@ -281,22 +418,25 @@ There's a decent amount of code duplication which isn't the best! */
     width: 9999px;
     padding-bottom: 10px;
 }
+
 #carousel_ul li {
     float: left;
     width: 200px;
     padding: 0px;
     height: 200px;
     background: #000000;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     margin-left: 5px;
     margin-right: 5px;
 }
+
 #carousel_ul li img {
     cursor: pointer;
     cursor: hand;
     border: 0px;
 }
+
 #left_scroll, #right_scroll {
     float: left;
     height: 130px;
@@ -304,6 +444,7 @@ There's a decent amount of code duplication which isn't the best! */
     margin-top: 20px;
     margin-left: 20px;
 }
+
 #left_scroll img, #right_scroll img {
     border: 0;
  /* remove the default border of linked image */
@@ -311,10 +452,12 @@ There's a decent amount of code duplication which isn't the best! */
     cursor: pointer;
     cursor: hand;
 }
+
 #left_scroll img {
     width: 40px;
     height: 40px;
 }
+
 #right_scroll img {
     width: 25px;
     height: 25px;
@@ -338,9 +481,11 @@ There's a decent amount of code duplication which isn't the best! */
 
 <script>
 var myVar;
+
 function myFunction() {
     myVar = setTimeout(showPage, 3000);
 }
+
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
@@ -348,9 +493,11 @@ function showPage() {
 </script>
 <script>
 var myVar;
+
 function myFunction() {
     myVar = setTimeout(showPage, 2000);
 }
+
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
@@ -459,7 +606,7 @@ function slide(where){
 </script>
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
       <div class="container">
         <img class="navbar-brand js-scroll-trigger" src="logo.png" alt=""> 
         <button class="navbar-toggler navbar-toggler-right  bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -469,7 +616,7 @@ function slide(where){
         <div class="collapse navbar-collapse" id="navbarResponsive">
              <ul class="navbar-nav  ml-auto">
                <li class="nav-item">
-<a href="index.html">
+<a href="IndexUpdate.html">
   <button class="button" style="vertical-align:middle">Home</button>
   </a>      
       </li>
@@ -509,8 +656,6 @@ function slide(where){
     <div class="layer layer-4"></div>
     
     <div class="center-icon"></div>
-    
-    
   </div>
   <div style="display:none;" id="myDiv" class="animate-bottom">
 
@@ -526,21 +671,14 @@ function slide(where){
    
       <div class="container">
         <div class="intro-text">
+		<br>	<br>
 		<br>
-		<br><br>
-		<br>
-		<br>
-		<br>
-          <div class="intro-lead-in" >Striving for Perfection</div>
-		  <br>
-		  <br>
-		
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
+		<div class="w3-container">
+  <h1 class="w3-center w3-animate-left">
+  <div class="intro-lead-in" ><span class="fade-in firstone">S</span><span class="fade-in firsttwo">t</span><span class="fade-in firstthree">r</span><span class="fade-in firstfour">i</span><span class="fade-in one">v</span><span class="fade-in two">i</span><span class="fade-in three">n</span><span class="fade-in four">g</span><span class="fade-in two"> </span><span class="fade-in five">f</span><span class="fade-in six">o</span><span class="fade-in seven">r</span><span class="fade-in two"> </span><span class="fade-in eight">P</span><span class="fade-in nine">e</span><span class="fade-in firstone">r</span><span class="fade-in firsttwo">f</span><span class="fade-in firstthree">e<span class="fade-in firstone">c</span><span class="fade-in firsttwo">t</span><span class="fade-in firstthree">i</span><span class="fade-in firsttwo">o</span><span class="fade-in firstthree">n</span></div>
+  </h1>
+</div>
+
 		  
 		 
 		  </div>
@@ -551,7 +689,7 @@ function slide(where){
 
   <div class="cert">
       <div class="container">
-	  
+	  <br>
             <h6>CERTIFICATIONS</h6>
         <div class="row">
 		
@@ -559,27 +697,25 @@ function slide(where){
     <div id='carousel_inner'>  	
         <ul id='carousel_ul'>  
 		   <li>
-                <a href='https://www.sba.gov/offices/headquarters/ohp'>
+                <a href='hub.pdf'>
                     <img src='HUBZone.png'/>
                 </a>
             </li>  
             <li>
-                <a href='https://www.gsa.gov/acquisition/assistance-for-small-businesses/is-gsa-right-for-you'>
-                    <img src='GSA.png'/>
-                </a>
+                <a href='https://www.gsa.gov/acquisition/assistance-for-small-businesses/is-gsa-right-for-youz	
             </li>  
             <li>
-                <a href='https://cmmiinstitute.com/certifications'>
+                <a href='cmmi.pdf'>
                     <img src='cmmi.jpg'/>
                 </a>
             </li>
             <li>
-                  <a href='http://www.mdot.maryland.gov/newMDOT/MBE/CertificationForms/CertificationsForms.html'>
+                  <a href='mdot.pdf'>
                       <img src='mbe.png'/>
                   </a>
               </li>
             <li>
-                  <a href='http://www.wbenc.org/'>
+                  <a href='wbenc.pdf'>
                       <img src='wbenc.png'/>
                   </a>
               </li>
@@ -625,7 +761,7 @@ function slide(where){
 			<!-- /.container -->
 	</div>
 <div class="cap">
-	<section class="bg-primary text-white mb-0" id="about">
+			<section id="about">
 			  <div class="container">
 				  <p>CAPABILITY STATEMENT</p>
 				<div class="text-center mt-4">
@@ -708,7 +844,12 @@ function slide(where){
             </ul>
           </div>
           <div class="col-md-4">
-           
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+              </li>
+              <li class="list-inline-item">
+              </li>
+            </ul>
           </div>
         </div>
       </div>
