@@ -263,7 +263,8 @@ header.masthead .intro-text {
     font-size: 45px;
     line-height: 40px;
     font-family: Impact, Charcoal, sans-serif;
-	    text-shadow: 4px px #000000;
+
+	 text-shadow:  0 0 8px #000000, 0 0 10px #227607;
 		
 	font-size:"5vw";
   }
@@ -284,7 +285,8 @@ header.masthead .intro-text {
     font-size: 80px;
     line-height: 40px;
     font-family: Impact, Charcoal, sans-serif;
-	    text-shadow: 4px px #000000;
+
+	 text-shadow:  0 0 8px #000000, 0 0 10px #227607;
 		
 	font-size:"5vw";
   }
