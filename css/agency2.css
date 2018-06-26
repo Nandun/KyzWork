@@ -190,80 +190,59 @@ img::-moz-selection {
 
   background: transparent;
 }
-#mainNav {
-  font-family: 'Arial, Helvetica, sans-serif';
-}
 
 #mainNav .navbar-brand {
-  color: #FFFFFF;
+  color: #black;
+  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
-#mainNav .navbar-nav {
-  letter-spacing: 0.0625rem;
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #fec503;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #000000;
-}
-
-#mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #FFF000;
-}
-
-#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-  color: #00000;
-}
-
-#mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #000000;
-}
-
-#mainNav .navbar-toggler {
- font-size: 6px;
-  right: 0;
-  margin-top: -12px;
-  padding: 13px;
-  text-transform: uppercase;
-  color: white;
-  border: 0;
-  background-color: #fed136;
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 90%;
+  font-weight: 400;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  color: black;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #fed136;
 }
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
   }
   #mainNav .navbar-brand {
-
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
-  #mainNav .navbar-nav {
+  #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-    color: #fff;
-    background: #FFFFFF
-  }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-    color: #fff;
-    background: #FFFFFF
-  }
   #mainNav.navbar-shrink {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    padding: 12px 0;
   }
 }
+
 header.masthead {
   color: white;
   background-image: url("../mapBack.jpg");
@@ -312,7 +291,8 @@ header.masthead .intro-text .intro-heading {
     font-size: 80px;
     line-height: 40px;
     font-family: Impact, Charcoal, sans-serif;
-	    text-shadow:  0 0 10px #008000;
+	    text-shadow: 4px px #000000;
+		
 	font-size:"5vw";
   }
   header.masthead .intro-text .intro-heading {
@@ -800,7 +780,7 @@ ul.social-buttons li a {
   display: block;
   width: 40px;
   height: 40px;
-  -webkit-transition: all 0.3s;		
+  -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   color: white;
