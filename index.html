@@ -404,12 +404,18 @@ There's a decent amount of code duplication which isn't the best! */
 .cap{
 	  background-image: url("capback.jpg");
 	  color: dark-blue;
+}#carousel_inner {
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    background: #;
+		
+	margin-left: 30px;
 }
 #carousel_ul li img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
-
 #carousel_ul {
     position: relative;
     list-style-type: none;
@@ -418,25 +424,22 @@ There's a decent amount of code duplication which isn't the best! */
     width: 9999px;
     padding-bottom: 10px;
 }
-
 #carousel_ul li {
     float: left;
-    width: 200px;
+    width: 100px;
     padding: 0px;
-    height: 200px;
+    height: 100px;
     background: #000000;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
 }
-
 #carousel_ul li img {
     cursor: pointer;
     cursor: hand;
     border: 0px;
 }
-
 #left_scroll, #right_scroll {
     float: left;
     height: 130px;
@@ -444,7 +447,6 @@ There's a decent amount of code duplication which isn't the best! */
     margin-top: 20px;
     margin-left: 20px;
 }
-
 #left_scroll img, #right_scroll img {
     border: 0;
  /* remove the default border of linked image */
@@ -452,15 +454,72 @@ There's a decent amount of code duplication which isn't the best! */
     cursor: pointer;
     cursor: hand;
 }
-
 #left_scroll img {
     width: 40px;
     height: 40px;
 }
-
 #right_scroll img {
     width: 25px;
     height: 25px;
+}
+@media (min-width: 1200px) {
+	#carousel_inner {
+    float: left;
+    width: 900px;
+    overflow: hidden;
+    background: #;
+	margin-left: 150px;
+}
+#carousel_ul li img {
+    width: 200px;
+    height: 200px;
+}
+#carousel_ul {
+    position: relative;
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0px;
+    width: 9999px;
+    padding-bottom: 10px;
+}
+#carousel_ul li {
+    float: left;
+    width: 200px;
+    padding: 0px;
+    height: 200px;
+    background: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#carousel_ul li img {
+    cursor: pointer;
+    cursor: hand;
+    border: 0px;
+}
+#left_scroll, #right_scroll {
+    float: left;
+    height: 130px;
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#left_scroll img, #right_scroll img {
+    border: 0;
+ /* remove the default border of linked image */
+/*styling*/
+    cursor: pointer;
+    cursor: hand;
+}
+#left_scroll img {
+    width: 40px;
+    height: 40px;
+}
+#right_scroll img {
+    width: 25px;
+    height: 25px;
+}
 }
 </style>
 
