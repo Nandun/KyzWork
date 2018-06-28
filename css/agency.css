@@ -15,9 +15,18 @@ a {
 a:hover {
   color: #fec503;
 }
+
+
+.cap{
+	font-size: 30px;
+	text-align: center;
+}
+@media (min-width: 1200px) {
+
 .cap{
 	font-size: 50px;
 	text-align: center;
+}
 }
 .text-primary {
   color: #fed136 !important;
@@ -307,7 +316,18 @@ font-size: 30px;
   background-color: #FFFFFF;
   background-image: url("../city.jpg");
   font-family: Impact, Charcoal, sans-serif;
+}
+@media (min-width: 1200px) {
+.cert{
+	text-align: center;
+vertical-align: middle;
+color:857F84;
+font-size: 40px;	
+  background-color: #FFFFFF;
+  background-image: url("../city.jpg");
+  font-family: Impact, Charcoal, sans-serif;
   
+}
 }
 .bar{
 max-height: 90px vh;
