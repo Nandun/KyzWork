@@ -286,7 +286,8 @@ header.masthead .intro-text {
     line-height: 40px;
     font-family: Impact, Charcoal, sans-serif;
 
-	 text-shadow:  0 0 8px #000000, 0 0 10px #227607;
+
+	    text-shadow:  0 0 10px #008000;
 		
 	font-size:"5vw";
   }
