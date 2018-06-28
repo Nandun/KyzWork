@@ -31,6 +31,19 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 <style>
+#container
+{
+    height:2000px;    
+}
+
+#container DIV
+{ 
+}
+
+.hideme
+{
+    opacity:0;
+}
 
 
 .firstname {
@@ -539,6 +552,33 @@ There's a decent amount of code duplication which isn't the best! */
     <script src="js/agency.min.js"></script>
 
 <script>
+$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object - 400 ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
 var myVar;
 
 function myFunction() {
@@ -717,7 +757,7 @@ function slide(where){
     <div class="center-icon"></div>
   </div>
   <div style="display:none;" id="myDiv" class="animate-bottom">
-
+<div id="container">
     <!-- Header -->
     <header class="masthead">
 		   
@@ -745,7 +785,7 @@ function slide(where){
           <div class="intro-heading text-uppercase"></div>
     
     </header>
-
+    <div class="hideme">
   <div class="cert">
       <div class="container">
 	  <br>
@@ -791,7 +831,8 @@ function slide(where){
    </div>
       </div>
     </div>
-
+ </div>
+ <div class="hideme">
 	<div class = "about">
 			<!-- About -->
 			<section id="about">
@@ -821,6 +862,9 @@ function slide(where){
 			</div>
 			<!-- /.container -->
 	</div>
+	</div>
+	
+ <div class="hideme">
 <div class="cap">
 			<section id="about">
 			  <div class="container">
@@ -834,7 +878,9 @@ function slide(where){
       </div> 
     </section>
 	</div>
-    
+ 	</div>   
+	
+ <div class="hideme">
 	<!-- Contact -->
     <section id="contact">
       <div class="container">
@@ -878,7 +924,8 @@ function slide(where){
         </div>
       </div>
     </section>
-
+	
+ 	</div>   
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -919,6 +966,7 @@ function slide(where){
 			 
 	
 
+</div>
 
   </body>
 
