@@ -275,7 +275,6 @@ header.masthead .intro-text {
 	  text-transform: uppercase;
     font-family: Impact, Charcoal, sans-serif;
 	 text-shadow:  0 0 8px #000000, 0 0 10px #227607;
-		
 	font-size:"5vw";
   }
   header.masthead .intro-text .intro-heading {
@@ -297,7 +296,7 @@ header.masthead .intro-text {
     font-family: Impact, Charcoal, sans-serif;
 
 
-	    text-shadow:  0 0 10px #008000;
+	 text-shadow:  0 0 8px #000000, 0 0 10px #227607;
 		
 	font-size:"5vw";
   }
