@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,37 +90,37 @@
 }
 
 .fade-in.three {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  animation-delay: 1.2s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .fade-in.four {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .fade-in.five {
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay:1.8s;
-  animation-delay: 1.8s;
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay:0.9s;
+  animation-delay:0.9s;
 }
 
 .fade-in.six {
-  -webkit-animation-delay: 2.1s;
-  -moz-animation-delay: 2.1s;
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .fade-in.seven {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .fade-in.eight {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .fade-in.nine {
@@ -132,24 +133,24 @@
  color:#FFFFFF;
 }
 .fade-in.firstfour {
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  animation-delay: 1.3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .fade-in.firstthree {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .fade-in.firsttwo {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .fade-in.firstone {
-  -webkit-animation-delay: 2.3s;
-  -moz-animation-delay: 2.3s;
-  animation-delay: 2.3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 
@@ -535,11 +536,30 @@ There's a decent amount of code duplication which isn't the best! */
 }
 }
 </style>
-
+<script>
+function () {
+    var vidElem = document.getElementById('robotVid');
+    console.log(vidElem);
+    vidElem.addEventListener("ended", function () {
+            vidElem.currentTime = 1;
+            vidElem.play();
+    }, false);
+}
+</script>
+<style>
+.vid
+{
+  position:fixed;
+  top:0;
+  left:0;
+  min-width:100%;
+  min-height: 100%;
+  margin:0 auto;
+}
+</style>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -568,7 +588,7 @@ $(document).ready(function() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object - 200 ){
+            if( bottom_of_window > bottom_of_object - 400 ){
                 
                 $(this).animate({'opacity':'1'},1500);
                     
@@ -594,7 +614,7 @@ function showPage() {
 var myVar;
 
 function myFunction() {
-    myVar = setTimeout(showPage, 2000);
+    myVar = setTimeout(showPage, 500);
 }
 
 function showPage() {
@@ -715,7 +735,7 @@ function slide(where){
         <div class="collapse navbar-collapse" id="navbarResponsive">
              <ul class="navbar-nav  ml-auto">
                <li class="nav-item">
-<a href="IndexUpdate.html">
+<a href="index.html">
   <button class="button" style="vertical-align:middle">Home</button>
   </a>      
       </li>
@@ -743,9 +763,9 @@ function slide(where){
             </li>         
         </ul>
       </div>
-    </div>
+    </div> 
 </nav>
-
+		  
 <body onload="myFunction()" style="margin:0;">
  <div id="loader">
     
@@ -761,6 +781,9 @@ function slide(where){
     <!-- Header -->
     <header class="masthead">
 		   
+<video muted="true" autoplay="true" class="vid" id="robotVid">
+   	<source src="C:\Users\Nemo\Desktop\globe2.mp4" type="video/mp4">
+</video>
 	
 
     <!-- Bootstrap core JavaScript -->
@@ -777,16 +800,16 @@ function slide(where){
   <div class="intro-lead-in" ><span class="fade-in firstone">S</span><span class="fade-in firsttwo">t</span><span class="fade-in firstthree">r</span><span class="fade-in firstfour">i</span><span class="fade-in one">v</span><span class="fade-in two">i</span><span class="fade-in three">n</span><span class="fade-in four">g</span><span class="fade-in two"> </span><span class="fade-in five">f</span><span class="fade-in six">o</span><span class="fade-in seven">r</span><span class="fade-in two"> </span><span class="fade-in eight">P</span><span class="fade-in nine">e</span><span class="fade-in firstone">r</span><span class="fade-in firsttwo">f</span><span class="fade-in firstthree">e<span class="fade-in firstone">c</span><span class="fade-in firsttwo">t</span><span class="fade-in firstthree">i</span><span class="fade-in firsttwo">o</span><span class="fade-in firstthree">n</span></div>
   </h1>
 </div>
-
-		  
+ 
 		 
 		  </div>
 		  </div>	  
           <div class="intro-heading text-uppercase"></div>
     
     </header>
-    <div class="hideme">
+
   <div class="cert">
+ 
       <div class="container">
 	  <br>
             <h6>CERTIFICATIONS</h6>
@@ -831,7 +854,6 @@ function slide(where){
    </div>
       </div>
     </div>
- </div>
  <div class="hideme">
 	<div class = "about">
 			<!-- About -->
@@ -870,7 +892,7 @@ function slide(where){
 			  <div class="container">
 				  <p>CAPABILITY STATEMENT</p>
 				<div class="text-center mt-4">
-				  <a class="btn btn-xl btn-outline-light" href="cap.pdf">
+				  <a class="btn btn-xl btn-outline-light" href="Capab.pdf">
             <i class="fa fa-download mr-2"></i>
             Download
           </a>

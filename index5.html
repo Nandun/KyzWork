@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,10 +32,21 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 <style>
-body{
+#container
+{
+    height:2000px;    
+}
 
-  background-color: black;
-  }
+#container DIV
+{ 
+}
+
+.hideme
+{
+    opacity:0;
+}
+
+
 .firstname {
 
     color:#000000;
@@ -78,37 +90,37 @@ body{
 }
 
 .fade-in.three {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  animation-delay: 1.2s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .fade-in.four {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .fade-in.five {
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay:1.8s;
-  animation-delay: 1.8s;
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay:0.9s;
+  animation-delay:0.9s;
 }
 
 .fade-in.six {
-  -webkit-animation-delay: 2.1s;
-  -moz-animation-delay: 2.1s;
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .fade-in.seven {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .fade-in.eight {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .fade-in.nine {
@@ -121,24 +133,24 @@ body{
  color:#FFFFFF;
 }
 .fade-in.firstfour {
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  animation-delay: 1.3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .fade-in.firstthree {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .fade-in.firsttwo {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .fade-in.firstone {
-  -webkit-animation-delay: 2.3s;
-  -moz-animation-delay: 2.3s;
-  animation-delay: 2.3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 
@@ -155,7 +167,7 @@ body{
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: radial-gradient(ellipse at center, rgba(107,245,65, 1) 0%,rgba(255,255,255,0) 65%);
+  background: radial-gradient(ellipse at center, rgba(58,134,183, 1) 0%,rgba(255,255,255,0) 65%);
 }
 
 .loader.smallify {
@@ -406,12 +418,18 @@ There's a decent amount of code duplication which isn't the best! */
 .cap{
 	  background-image: url("capback.jpg");
 	  color: dark-blue;
+}#carousel_inner {
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    background: #;
+		
+	margin-left: 30px;
 }
 #carousel_ul li img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
-
 #carousel_ul {
     position: relative;
     list-style-type: none;
@@ -420,25 +438,22 @@ There's a decent amount of code duplication which isn't the best! */
     width: 9999px;
     padding-bottom: 10px;
 }
-
 #carousel_ul li {
     float: left;
-    width: 200px;
+    width: 100px;
     padding: 0px;
-    height: 200px;
+    height: 100px;
     background: #000000;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
 }
-
 #carousel_ul li img {
     cursor: pointer;
     cursor: hand;
     border: 0px;
 }
-
 #left_scroll, #right_scroll {
     float: left;
     height: 130px;
@@ -446,7 +461,6 @@ There's a decent amount of code duplication which isn't the best! */
     margin-top: 20px;
     margin-left: 20px;
 }
-
 #left_scroll img, #right_scroll img {
     border: 0;
  /* remove the default border of linked image */
@@ -454,22 +468,89 @@ There's a decent amount of code duplication which isn't the best! */
     cursor: pointer;
     cursor: hand;
 }
-
 #left_scroll img {
     width: 40px;
     height: 40px;
 }
-
 #right_scroll img {
     width: 25px;
     height: 25px;
 }
+@media (min-width: 1200px) {
+	#carousel_inner {
+    float: left;
+    width: 900px;
+    overflow: hidden;
+    background: #;
+	margin-left: 150px;
+}
+#carousel_ul li img {
+    width: 200px;
+    height: 200px;
+}
+#carousel_ul {
+    position: relative;
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0px;
+    width: 9999px;
+    padding-bottom: 10px;
+}
+#carousel_ul li {
+    float: left;
+    width: 200px;
+    padding: 0px;
+    height: 200px;
+    background: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#carousel_ul li img {
+    cursor: pointer;
+    cursor: hand;
+    border: 0px;
+}
+#left_scroll, #right_scroll {
+    float: left;
+    height: 130px;
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#left_scroll img, #right_scroll img {
+    border: 0;
+ /* remove the default border of linked image */
+/*styling*/
+    cursor: pointer;
+    cursor: hand;
+}
+#left_scroll img {
+    width: 40px;
+    height: 40px;
+}
+#right_scroll img {
+    width: 25px;
+    height: 25px;
+}
+}
 </style>
 
+<style>
+.vid
+{
+  position:fixed;
+  top:0;
+  left:0;
+  min-width:100%;
+  min-height: 100%;
+  margin:0 auto;
+}
+</style>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -480,8 +561,45 @@ There's a decent amount of code duplication which isn't the best! */
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
 <script>
+function () {
+    var vidElem = document.getElementById('robotVid');
+    console.log(vidElem);
+    vidElem.addEventListener("ended", function () {
+            vidElem.currentTime = 2.5;
+            vidElem.play();
+    }
+    
+}
+</script>
+<script>
+$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object - 400 ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
 var myVar;
 
 function myFunction() {
@@ -497,7 +615,7 @@ function showPage() {
 var myVar;
 
 function myFunction() {
-    myVar = setTimeout(showPage, 2000);
+    myVar = setTimeout(showPage, 500);
 }
 
 function showPage() {
@@ -618,7 +736,7 @@ function slide(where){
         <div class="collapse navbar-collapse" id="navbarResponsive">
              <ul class="navbar-nav  ml-auto">
                <li class="nav-item">
-<a href="IndexUpdate.html">
+<a href="index.html">
   <button class="button" style="vertical-align:middle">Home</button>
   </a>      
       </li>
@@ -646,9 +764,9 @@ function slide(where){
             </li>         
         </ul>
       </div>
-    </div>
+    </div> 
 </nav>
-
+		  
 <body onload="myFunction()" style="margin:0;">
  <div id="loader">
     
@@ -660,10 +778,18 @@ function slide(where){
     <div class="center-icon"></div>
   </div>
   <div style="display:none;" id="myDiv" class="animate-bottom">
-
+<div id="container">
     <!-- Header -->
     <header class="masthead">
-		   
+		 <script type="text/javascript">
+    $("#myVideo").bind("timeupdate", function(){
+        if(this.currentTime > 7)
+            this.currentTime = 0;
+    })
+</script>
+<video muted="true" autoplay="true" class="vid" id="robotVid">
+   	<source src="C:\Users\Nemo\Desktop\globe3.mp4" type="video/mp4">
+</video>
 	
 
     <!-- Bootstrap core JavaScript -->
@@ -680,8 +806,7 @@ function slide(where){
   <div class="intro-lead-in" ><span class="fade-in firstone">S</span><span class="fade-in firsttwo">t</span><span class="fade-in firstthree">r</span><span class="fade-in firstfour">i</span><span class="fade-in one">v</span><span class="fade-in two">i</span><span class="fade-in three">n</span><span class="fade-in four">g</span><span class="fade-in two"> </span><span class="fade-in five">f</span><span class="fade-in six">o</span><span class="fade-in seven">r</span><span class="fade-in two"> </span><span class="fade-in eight">P</span><span class="fade-in nine">e</span><span class="fade-in firstone">r</span><span class="fade-in firsttwo">f</span><span class="fade-in firstthree">e<span class="fade-in firstone">c</span><span class="fade-in firsttwo">t</span><span class="fade-in firstthree">i</span><span class="fade-in firsttwo">o</span><span class="fade-in firstthree">n</span></div>
   </h1>
 </div>
-
-		  
+ 
 		 
 		  </div>
 		  </div>	  
@@ -690,6 +815,7 @@ function slide(where){
     </header>
 
   <div class="cert">
+ 
       <div class="container">
 	  <br>
             <h6>CERTIFICATIONS</h6>
@@ -704,8 +830,10 @@ function slide(where){
                 </a>
             </li>  
             <li>
-                <a href='https://www.gsa.gov/acquisition/assistance-for-small-businesses/is-gsa-right-for-youz	
-            </li>  
+                <a href='gsa.pdf'>
+                    <img src='GSA.png'/>
+                </a>
+            </li>    
             <li>
                 <a href='cmmi.pdf'>
                     <img src='cmmi.jpg'/>
@@ -732,7 +860,7 @@ function slide(where){
    </div>
       </div>
     </div>
-
+ <div class="hideme">
 	<div class = "about">
 			<!-- About -->
 			<section id="about">
@@ -762,12 +890,15 @@ function slide(where){
 			</div>
 			<!-- /.container -->
 	</div>
+	</div>
+	
+ <div class="hideme">
 <div class="cap">
 			<section id="about">
 			  <div class="container">
 				  <p>CAPABILITY STATEMENT</p>
 				<div class="text-center mt-4">
-				  <a class="btn btn-xl btn-outline-light" href="cap.pdf">
+				  <a class="btn btn-xl btn-outline-light" href="Capab.pdf">
             <i class="fa fa-download mr-2"></i>
             Download
           </a>
@@ -775,7 +906,9 @@ function slide(where){
       </div> 
     </section>
 	</div>
-    
+ 	</div>   
+	
+ <div class="hideme">
 	<!-- Contact -->
     <section id="contact">
       <div class="container">
@@ -819,7 +952,8 @@ function slide(where){
         </div>
       </div>
     </section>
-
+	
+ 	</div>   
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -848,7 +982,6 @@ function slide(where){
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
               </li>
               <li class="list-inline-item">
               </li>
@@ -861,6 +994,7 @@ function slide(where){
 			 
 	
 
+</div>
 
   </body>
 
