@@ -17,7 +17,6 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	  
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
@@ -32,6 +31,298 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 <style>
+.overlay-desc {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: white;
+  font-family: 'Nobile', sans-serif;
+  font-size: 9vw;
+  text-align: center;
+}
+h9{
+	positon: absolute;
+	font-size: 1.0em;
+	color: #FFFFFF;
+}
+
+main {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.videoContainer 
+{
+    position:absolute;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+}
+
+.videoContainer video 
+{
+    min-width: 100%;
+    min-height: 100%;
+}
+#container
+{
+    height:2000px;    
+}
+
+#container DIV
+{ 
+}
+
+.hideme
+{
+    opacity:0;
+}
+
+
+.firstname {
+
+    color:#000000;
+}
+
+
+#loader {
+ margin: auto;
+  width: 250px;
+  height: 250px;
+  margin-top: 200px;
+  display: flex;
+  display:-webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, rgba(58,134,183, 1) 0%,rgba(255,255,255,0) 65%);
+}
+
+.loader.smallify {
+  animation: smallify 0.5s normal forwards;
+  -webkit-animation: smallify 0.5s normal forwards;
+  -moz-animation: smallify 0.5s normal forwards;
+  -ms-animation: smallify 0.5s normal forwards;
+  -o-animation: smallify 0.5s normal forwards;
+}
+
+@keyframes smallify {
+  0% {
+    width: 250px;
+    height: 250px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.center-icon {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  animation: pulse 2s linear infinite;
+  animation: pulse 2s linear infinite;
+  -webkit-animation: pulse 2s linear infinite;
+  -moz-animation: pulse 2s linear infinite;
+  -ms-animation: pulse 2s linear infinite;
+  -o-animation: pulse 2s linear infinite;
+  box-shadow: 
+    0 0 10px 1px #fff,
+    0 0 20px 1px #fff,
+    0 0 30px 2px #fff,
+    0 0 50px 5px #fff,
+    0 0 50px 10px #fff;
+}
+
+.center-icon.minimise {
+  animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
+  -webkit-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
+  -moz-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
+  -ms-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
+  -o-animation: minimise 0.5s cubic-bezier(.45,0,0,1) forwards;
+}
+
+@keyframes minimise {
+  0% {
+    width: 5px;
+    height: 5px;
+  }
+  10% {
+    width: 250px;
+    height: 2px;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    box-shadow: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+  box-shadow: 
+    0 0 10px 1px #fff,
+    0 0 20px 1px #fff,
+    0 0 30px 2px #fff,
+    0 0 50px 5px #fff,
+    0 0 50px 10px #fff;
+  }
+  50% {
+    box-shadow: 
+      0 0 10px 2px #fff,
+      0 0 20px 2px #fff,
+      0 0 30px 4px #fff,
+      0 0 250px 15px #0ff,
+      0 0 500px 35px #fff;
+  }
+}
+
+.layer {
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid rgba(210, 215, 219, .1);
+  border-top: 10px solid rgba(52, 152, 219, 0.7);
+  box-shadow: inset 0 0 10px 4px rgba(47, 114, 153, 0.6);
+  transition: all 0.5s cubic-bezier(.45,0,0,1);
+  -webkit-transition: all 0.5s cubic-bezier(.45,0,0,1);
+  -moz-transition: all 0.5s cubic-bezier(.45,0,0,1);
+  -ms-transition: all 0.5s cubic-bezier(.45,0,0,1);
+  -o-transition: all 0.5s cubic-bezier(.45,0,0,1);
+/*   Want to use:border-image:
+      linear-gradient(); however doesn't work with    border-radius as of yet! :(*/
+}
+
+.layer.compact {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*  This next part could be refactored into perhaps using Javascript.
+
+There's a decent amount of code duplication which isn't the best! */
+
+.layer-1 {
+  width: 40px;
+  height: 40px;
+  animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
+  -webkit-animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
+  -moz-animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
+  -ms-animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
+  -o-animation: spin 1.5s cubic-bezier(.17,.67,.83,.67) infinite;
+}
+
+.layer-2 {
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  -ms-animation: spin 2s linear infinite;
+  -o-animation: spin 2s linear infinite;
+}
+
+.layer-3 {
+  width: 130px;
+  height: 130px;
+  animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
+  -webkit-animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
+  -moz-animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
+  -ms-animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
+  -o-animation: spin 1.5s cubic-bezier(.27,.62,.94,.64) infinite;
+}
+
+.layer-4 {
+  width: 190px;
+  height: 190px;
+  animation: spin 3s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  -ms-animation: spin 3s linear infinite;
+  -o-animation: spin 3s linear infinite;
+}
+
+.finish-loading {
+  z-index: 2;
+  text-align: center;
+  font-size: 30px;
+  width: 100px;
+  padding: 2px;
+  padding-top: 0px;
+  color: rgba(210, 215, 219, 0.3);
+  cursor: pointer;
+  background: rgba(0,0,0,0);
+  border: solid 5px rgba(52, 152, 219, 0.7);
+  font-family: "Segoe UI";
+  transition: all 1s cubic-bezier(.27,.62,.94,.64);
+}
+
+
+.noAnimation {
+  animation: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -ms-animation: none !important;
+  -o-animation: none !important;
+}
+
+.welcome-message {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-size: 100px;
+  color: rgba(52, 152, 219, 0.7);
+  font-family: "Segoe UI";
+  transition: all 1s cubic-bezier(.27,.62,.94,.64);
+  opacity: 0;
+}
+
+.welcome-fade {
+  opacity: 1;
+}
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
 	header.masthead {
 	  text-align: center;
 	  color: white;
@@ -43,7 +334,7 @@
 	  -moz-background-size: auto;
 	  -o-background-size: cover;
 	  background-size: cover;
-		  max-height: 105vh;
+		  max-height: 85vh;
 	}
 	#carousel_inner {
     float: left;
@@ -52,12 +343,84 @@
     background: #;
 	margin-left: 150px;
 }
-
-#carousel_ul li img {
-    width: 200px;
-    height: 200px;
+.about{
+	  background-image: url("face.jpg");
+	  color: white;
+	  max-height: 500px;
 }
 
+.cap{
+	  background-image: url("capback.jpg");
+	  color: dark-blue;
+}#carousel_inner {
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    background: #;
+		
+	margin-left: 30px;
+}
+#carousel_ul li img {
+    width: 90px;
+    height: 90px;
+}
+#carousel_ul {
+    position: relative;
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0px;
+    width: 9999px;
+}
+#carousel_ul li {
+    float: left;
+    width: 100px;
+    padding: 0px;
+    height: 100px;
+    background: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#carousel_ul li img {
+    cursor: pointer;
+    cursor: hand;
+    border: 0px;
+}
+#left_scroll, #right_scroll {
+    float: left;
+    height: 130px;
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#left_scroll img, #right_scroll img {
+    border: 0;
+ /* remove the default border of linked image */
+/*styling*/
+    cursor: pointer;
+    cursor: hand;
+}
+#left_scroll img {
+    width: 40px;
+    height: 40px;
+}
+#right_scroll img {
+    width: 25px;
+    height: 25px;
+}
+@media (min-width: 1200px) {
+	#carousel_inner {
+    float: left;
+    width: 900px;
+    overflow: hidden;
+    background: #;
+	margin-left: 150px;
+}
+#carousel_ul li img {
+    width: 150px;
+    height: 150px;
+}
 #carousel_ul {
     position: relative;
     list-style-type: none;
@@ -66,25 +429,22 @@
     width: 9999px;
     padding-bottom: 10px;
 }
-
 #carousel_ul li {
     float: left;
-    width: 200px;
+    width: 150px;
     padding: 0px;
-    height: 200px;
+    height: 150px;
     background: #000000;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
 }
-
 #carousel_ul li img {
     cursor: pointer;
     cursor: hand;
     border: 0px;
 }
-
 #left_scroll, #right_scroll {
     float: left;
     height: 130px;
@@ -92,7 +452,6 @@
     margin-top: 20px;
     margin-left: 20px;
 }
-
 #left_scroll img, #right_scroll img {
     border: 0;
  /* remove the default border of linked image */
@@ -100,15 +459,14 @@
     cursor: pointer;
     cursor: hand;
 }
-
 #left_scroll img {
     width: 40px;
     height: 40px;
 }
-
 #right_scroll img {
     width: 25px;
     height: 25px;
+}
 }
 </style>
 
@@ -127,6 +485,57 @@
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 
+<script>
+$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object - 400 ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 <script>
 $(".box").hide().fadeIn(2000);
 </script>
@@ -229,7 +638,7 @@ function slide(where){
 }  
 </script>
 </head>
-  <body id="page-top">
+<body>
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
       <div class="container">
         <img class="navbar-brand js-scroll-trigger" src="logo.png" alt=""> 
@@ -240,7 +649,7 @@ function slide(where){
         <div class="collapse navbar-collapse" id="navbarResponsive">
              <ul class="navbar-nav  ml-auto">
                <li class="nav-item">
-<a href="IndexUpdate.html">
+<a href="index.html">
   <button class="button" style="vertical-align:middle">Home</button>
   </a>      
       </li>
@@ -270,75 +679,70 @@ function slide(where){
       </div>
     </div>
 </nav>
- 
-<div class="box">
-    <!-- Header -->
-    <header class="masthead">
-		   
-	
 
-    <!-- Bootstrap core JavaScript -->
+<div id="container">
+    <!-- Header -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-   
-      <div class="container">
-        <div class="intro-text">
-		
-<div class="w3-container w3-center w3-animate-opacity">
+<div class="videoContainer">
 
-<div class="w3-container w3-center w3-animate-right">
-          <div class="intro-lead-in" >Striving for Perfection</div>
-		  <br>
-		  <br>
+  <video autoplay loop>
+    <source src="vidhh.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    Video not supported.]
+  </video>
+  
+</div>
 		
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  
-		 
+<br>
+<br>
+<br>
+  <div class="cert">
+  
+     <div class="container">
+	 
+        <div class="intro-text">
+		<br>
+		<br>
+		
+            <head1>Striving For Perfection</head1>
+			<br>
+		<br>
+		<br>
+
 		  </div>
 		  </div>	  
           <div class="intro-heading text-uppercase"></div>
-        </div>
-      </div>
-    </header>
-
-  <div class="cert"
-    <section id="services">
       <div class="container">
-	  
-            <h6>Certifications</h6>
+	  <br>
         <div class="row">
 		
+		
    <div id='carousel_container'>  
-    <div id='carousel_inner'>  
+    <div id='carousel_inner'>  	
         <ul id='carousel_ul'>  
 		   <li>
-                <a href='https://www.sba.gov/offices/headquarters/ohp'>
+                <a href='hub.pdf'>
                     <img src='HUBZone.png'/>
                 </a>
             </li>  
             <li>
-                <a href='https://www.gsa.gov/acquisition/assistance-for-small-businesses/is-gsa-right-for-you'>
+                <a href='gsa.pdf'>
                     <img src='GSA.png'/>
                 </a>
-            </li>  
+            </li>    
             <li>
-                <a href='https://cmmiinstitute.com/certifications'>
+                <a href='cmmi.pdf'>
                     <img src='cmmi.jpg'/>
                 </a>
             </li>
             <li>
-                  <a href='http://www.mdot.maryland.gov/newMDOT/MBE/CertificationForms/CertificationsForms.html'>
+                  <a href='mdot.pdf'>
                       <img src='mbe.png'/>
                   </a>
               </li>
             <li>
-                  <a href='http://www.wbenc.org/'>
+                  <a href='wbenc.pdf'>
                       <img src='wbenc.png'/>
                   </a>
               </li>
@@ -350,68 +754,66 @@ function slide(where){
         </ul>  
     </div>   
 </div>  
+<br>
+<br>
+
+<br>
+
+<br>
+
    </div>
       </div>
     </div>
-    </section>
+ <div class="hideme">
+	<div class = "about">
+			<!-- About -->
+			<section id="about">
+			  <div class="container">
+		  <!-- Features Section -->
+			  <div class="row">
+				<div class="col-lg-6">
+				
+				  <h6>Welcome to Kyzen</h6>
+			
+		<p> Kyzen Consulting is a complete 
+			software solutions provider. Kyzen 
+			provides a multi-faceted portfolio 
+			of products and service to it's clients, 
+			including a complete E-Commerce 
+			solution methodology, on-site and 
+			off-site software systems development, 
+			and turnkey projects.</p>
+				  <p>Kyzen Consulting Services offers expertise in all phases of system and software development, from start to finish, on a wide range of hardware and software platforms, using the latest software design methodologies. We provide a multi-faceted portfolio of products and services to our clients, including a complete software solution methodology. We can work at your location or ours, providing software and systems development, consultants, subcontracting, training, and multimedia development. </p>        </div>
+				<div class="col-lg-6">
+				</div>
+			  </div>
+			  <!-- /.row -->
 
-</div>
-	<section>
-	<div class=bar>
-	<div>
-	</section>
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-  <!-- Features Section -->
-      <div class="row">
-        <div class="col-lg-6">
-          <h6>Welcome to Kyzen</h6>
-    
-<p> Kyzen Consulting is a complete 
-    software solutions provider. Kyzen 
-    provides a multi-faceted portfolio 
-    of products and service to it's clients, 
-    including a complete E-Commerce 
-    solution methodology, on-site and 
-    off-site software systems development, 
-    and turnkey projects.</p>
-          <p>Kyzen Consulting Services offers expertise in all phases of system and software development, from start to finish, on a wide range of hardware and software platforms, using the latest software design methodologies. We provide a multi-faceted portfolio of products and services to our clients, including a complete software solution methodology. We can work at your location or ours, providing software and systems development, consultants, subcontracting, training, and multimedia development. </p>        </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded" src="staff.jpg" alt="">
-        </div>
-      </div>
-      <!-- /.row -->
+			  <hr>
 
-      <hr>
-
-    </div>
-    <!-- /.container -->
-
-        </div>
-      </div>
-    </section>
-    <section class="bg-primary text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">Capability Statement</h2>
-        <hr class="star-light mb-5">
-        <div class="row">
-      <!--    <div class="col-lg-4 ml-auto">
-            <p class="lead">Text Describing Capability statement and referencing download Link</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Text Describing Capability statement and referencing download Link</p>
-          </div>-->
-        </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="cap.pdf">
+			</div>
+			<!-- /.container -->
+	</div>
+	</div>
+	
+ <div class="hideme">
+<div class="cap">
+			<section id="about">
+			  <div class="container">
+				  <p>CAPABILITY STATEMENT</p>
+				<div class="text-center mt-4">
+				  <a class="btn btn-xl btn-outline-light" href="Capab.pdf">
             <i class="fa fa-download mr-2"></i>
             Download
           </a>
         </div>
       </div> 
     </section>
-    <!-- Contact -->
+	</div>
+ 	</div>   
+	
+ <div class="hideme">
+	<!-- Contact -->
     <section id="contact">
       <div class="container">
         <div class="row">
@@ -454,13 +856,13 @@ function slide(where){
         </div>
       </div>
     </section>
-
+	
+ 	</div>   
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2018</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -484,22 +886,19 @@ function slide(where){
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+				</div>
+			 
+	
 
 </div>
-</div>
-
-
-
 
   </body>
 
